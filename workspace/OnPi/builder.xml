@@ -29,7 +29,10 @@
 			<restrict>
 				<archives>
 					<zips>
-						<fileset dir="${dir.lib}" includes="**/**" />
+						<fileset dir="${dir.lib}" includes="**/**" excludes="/javadoc/** /source/** pi4j-example.jar" >
+						
+						</fileset>
+						
 					</zips>
 				</archives>
 			</restrict>
