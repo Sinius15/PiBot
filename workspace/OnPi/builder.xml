@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="main">
+
+	<target name="main">
+		
+		<delete file="robot.jar"/>
+		
+		<!-- Creatign Variables  -->
+		<property name="dir.lib" value="libs" />
+		<property name="dir.src" value="src" />
+		<property name="dir.build" value="bin" />
+
+		<path id="jars">
+			<fileset dir="libs" includes="**/*.jar" />
+		</path>
+
+		<mkdir dir="${dir.build}" />
+		
+		<!-- comopile all code to bin folder -->
+		<javac destdir="${dir.build}" srcdir="${dir.src}" classpathref="jars" includeantruntime="false" />
+
+		<!-- Create robot.jar -->
+		<jar destfile="../../piBotServer.jar" filesetmanifest="mergewithoutmain">
+			<fileset dir="${dir.build}" />
+			<manifest>
+				<attribute name="Main-Class" value="bot.Test" />
+				<attribute name="Class-Path" value="."/>
+			</manifest>
+			<restrict>
+				<archives>
+					<zips>
+						<fileset dir="${dir.lib}" includes="**/**" />
+					</zips>
+				</archives>
+			</restrict>
+		</jar>
+
+		<delete dir="${dir.build}" />
+
+	</target>
+</project>

@@ -1,0 +1,11 @@
+============================
+=======Project PiBot========
+============================
+pibot ip: 10.233.0.130
+  - BitTorrent Sync port: 8888
+  - PiBot Server: 4444
+
+phone ip: 10.233.0.117
+  - Gyro Server: 5555
+
+Director Fury: 10.233.0.119
