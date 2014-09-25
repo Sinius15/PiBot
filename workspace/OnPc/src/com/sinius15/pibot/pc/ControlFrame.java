@@ -161,6 +161,7 @@ public class ControlFrame extends JFrame {
 		rightPane.add(lblPibotip, gbc_lblPibotip);
 		
 		ipPiBot = new JTextField();
+		ipPiBot.setEditable(false);
 		ipPiBot.setText("loading...");
 		GridBagConstraints gbc_ipPiBot = new GridBagConstraints();
 		gbc_ipPiBot.insets = new Insets(0, 0, 5, 0);
@@ -179,6 +180,7 @@ public class ControlFrame extends JFrame {
 		rightPane.add(lblPhoneIp, gbc_lblPhoneIp);
 		
 		ipPhone = new JTextField();
+		ipPhone.setEditable(false);
 		ipPhone.setText("loading...");
 		GridBagConstraints gbc_ipPhone = new GridBagConstraints();
 		gbc_ipPhone.insets = new Insets(0, 0, 5, 0);
@@ -197,6 +199,8 @@ public class ControlFrame extends JFrame {
 		rightPane.add(lblControllerIp, gbc_lblControllerIp);
 		
 		ipController = new JTextField();
+		ipController.setText("loading...");
+		ipController.setEditable(false);
 		GridBagConstraints gbc_ipController = new GridBagConstraints();
 		gbc_ipController.insets = new Insets(0, 0, 5, 0);
 		gbc_ipController.fill = GridBagConstraints.HORIZONTAL;
