@@ -23,7 +23,7 @@
 		<jar destfile="../../piBotServer.jar" filesetmanifest="mergewithoutmain">
 			<fileset dir="${dir.build}" />
 			<manifest>
-				<attribute name="Main-Class" value="bot.Test" />
+				<attribute name="Main-Class" value="com.sinius15.pibot.pi.PiServer" />
 				<attribute name="Class-Path" value="."/>
 			</manifest>
 			<restrict>

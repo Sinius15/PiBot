@@ -3,5 +3,5 @@
 ====================
 
 Pi to Controller comminucation:
-  leftWheelSpeed;rightWheelSpeed;BatteryPower;TimeOnline
+  leftWheelSpeed=50;rightWheelSpeed=60;BatteryPower=90;TimeOnline=300
 

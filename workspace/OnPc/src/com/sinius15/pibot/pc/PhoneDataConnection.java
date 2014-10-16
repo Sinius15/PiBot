@@ -2,22 +2,22 @@ package com.sinius15.pibot.pc;
 
 import java.io.IOException;
 
-import com.sinius15.pibot.pc.event.GyroEvent;
+import com.sinius15.pibot.pc.event.PhoneEvent;
 
 /**
  * receives gyro data from the mobile phone on the pibot.
  * @author Sinius
  */
-public class GyroDataReceiver extends DataReceiver{
+public class PhoneDataConnection extends DataConnection{
 
-	public static final String IP = "195.169.162.21";
+	public static final String IP = "10.233.0.117";
 	public static final int PORT = 5555;
 	
-	private GyroEvent event;
+	private PhoneEvent event;
 	
 	private float rotationX, rotationY, rotationZ;
 	
-	public GyroDataReceiver() throws IOException{
+	public PhoneDataConnection() throws IOException{
 		connect(IP, PORT);
 	}
 
@@ -49,10 +49,10 @@ public class GyroDataReceiver extends DataReceiver{
 	public float getRotationZ() {
 		return rotationZ;
 	}
-	public GyroEvent getGyroEvent() {
+	public PhoneEvent getGyroEvent() {
 		return event;
 	}
-	public void setGyroEvent(GyroEvent event) {
+	public void setGyroEvent(PhoneEvent event) {
 		this.event = event;
 	}
 
